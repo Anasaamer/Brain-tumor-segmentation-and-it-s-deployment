@@ -101,11 +101,7 @@ def main():
     - **Single Image Upload:** Users can upload a single MRI image file (PNG or JPG format). The app displays the original image and processes it to generate the segmented output.
     - **Multiple Image Upload:** Users can upload multiple MRI image files simultaneously. The app processes each image individually, displaying both the original and the segmented images for each upload.
 
-    ### Image Preprocessing and Segmentation
-
-    - **Preprocessing:** Uploaded images are resized to 256x256 pixels, normalized, and prepared for the model's input format.
-    - **Segmentation:** The pre-trained U-Net model predicts the segmented output for the uploaded images. The results are displayed alongside the original images for comparison.
-
+    
     ### Metrics
 
     The app includes custom metrics for evaluating the segmentation results:
