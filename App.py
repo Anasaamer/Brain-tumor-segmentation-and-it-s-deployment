@@ -101,15 +101,6 @@ def main():
     - **Single Image Upload:** Users can upload a single MRI image file (PNG or JPG format). The app displays the original image and processes it to generate the segmented output.
     - **Multiple Image Upload:** Users can upload multiple MRI image files simultaneously. The app processes each image individually, displaying both the original and the segmented images for each upload.
 
-    
-    ### Metrics
-
-    The app includes custom metrics for evaluating the segmentation results:
-
-    - **Dice Coefficients:** Measures the overlap between the predicted and true segmentation masks.
-    - **Intersection over Union (IoU):** Evaluates the intersection and union of the predicted and true masks.
-    - **Jaccard Distance:** Another metric for comparing the predicted and true masks, derived from IoU.
-
     ## Advantages
 
     1. **User-Friendly Interface:** The Streamlit framework provides an intuitive and interactive interface, making it easy for users to upload images and view results.
