@@ -88,6 +88,46 @@ def add_user():
 def main():
     st.title("Brain MRI Segmentation App")
 
+    st.markdown("""
+    ## Features and Usage
+
+    ### User Authentication
+
+    - **Registration:** Users can register by providing a username and password. Passwords are hashed for secure storage using the `bcrypt` library.
+    - **Login:** Registered users can log in by providing their credentials. The app verifies the credentials and grants access upon successful authentication.
+
+    ### Image Upload and Processing
+
+    - **Single Image Upload:** Users can upload a single MRI image file (PNG or JPG format). The app displays the original image and processes it to generate the segmented output.
+    - **Multiple Image Upload:** Users can upload multiple MRI image files simultaneously. The app processes each image individually, displaying both the original and the segmented images for each upload.
+
+    ### Image Preprocessing and Segmentation
+
+    - **Preprocessing:** Uploaded images are resized to 256x256 pixels, normalized, and prepared for the model's input format.
+    - **Segmentation:** The pre-trained U-Net model predicts the segmented output for the uploaded images. The results are displayed alongside the original images for comparison.
+
+    ### Metrics
+
+    The app includes custom metrics for evaluating the segmentation results:
+
+    - **Dice Coefficients:** Measures the overlap between the predicted and true segmentation masks.
+    - **Intersection over Union (IoU):** Evaluates the intersection and union of the predicted and true masks.
+    - **Jaccard Distance:** Another metric for comparing the predicted and true masks, derived from IoU.
+
+    ## Advantages
+
+    1. **User-Friendly Interface:** The Streamlit framework provides an intuitive and interactive interface, making it easy for users to upload images and view results.
+    2. **Secure Access:** User authentication ensures that only authorized users can access the app, enhancing security and privacy.
+    3. **Efficient Processing:** The app supports both single and multiple image uploads, allowing for flexible and efficient processing.
+    4. **Advanced Metrics:** Custom metrics provide detailed insights into the performance of the segmentation model.
+
+    ## How to Use the App
+
+    1. **Register and Login:** If you are a new user, register by providing a username and password. Existing users can log in with their credentials.
+    2. **Upload Images:** Choose the upload mode (single or multiple images) and upload your MRI image files.
+    3. **View Results:** The app will display the original images and the corresponding segmented outputs. The segmentation results will highlight the regions of interest within the brain scans.
+    """)
+
     # Sidebar for input file upload
     upload_mode = st.sidebar.radio("Select upload mode:", ("Single Image", "Multiple Images"))
 
